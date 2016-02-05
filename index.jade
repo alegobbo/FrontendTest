@@ -1,0 +1,147 @@
+extends layout
+
+prepend head
+	title ProntoPro
+append head
+	link(href="assets/css/jquery-ui/jquery-ui.css", rel="stylesheet")
+	link(href="assets/css/style.css", rel="stylesheet")
+block container
+	block content
+		#intro
+			.container
+				.row
+					.col-lg-12.text-center
+						img(src="assets/images/intro.png", width="525", height="92", class="img-responsive", alt="ProntoPro")
+			.container-fluid
+				.row
+					.col-sm-6.text-center.section-link
+						p DICONO DI NOI
+					.col-sm-6.text-center.section-link
+						p PRESS
+		#featured_articles
+			.container
+				.row
+					.col-sm-10.col-sm-offset-1
+						article
+							img(src="assets/images/corriere-della-sera.png", width="168", height="16", class="img-responsive", alt="Corriere Della Sera")
+							p Moglie, marito, Taiwan e una start up.
+						article
+							img(src="assets/images/multiple-press.png", width="776", height="25", class="img-responsive", alt="Testate multiple")
+							p
+								| Ristrutturare casa? A Roma costa di più di Milano e Trento.
+								br
+								| Catanzaro e Palermo le città più convenienti
+						article
+							img(src="assets/images/corriere-giornale.png", width="306", height="16", class="img-responsive", alt="Corriere Della Sera")
+							p Trentamila euro per ristrutturare casa a Napoli e Palermo
+		#cta
+			.container-fluid
+				.row
+					.col-lg-12.text-center
+						p Vuoi pubblicare un articolo su ProntoPro? 
+							a(href="" class="") Vieni nella sezione Press
+							br
+							| Vuoi ulteriori informazioni? 
+							a(href="" class="") Scrivici
+		#content
+			.container
+				.row
+					article.text-center
+						.col-sm-1
+							small.month NOV
+							br
+							span.day 13
+							br
+							small.year 2015
+						.col-sm-3
+							img(src="assets/images/il-tempo.png", width="160", height="26", class="img-responsive", alt="Il Tempo")
+						.col-sm-8
+							p 34mila euro per ristrutturare casa
+						.clearfix
+				.row
+					article.text-center
+						.col-sm-1
+							small.month NOV
+							br
+							span.day 13
+							br
+							small.year 2015
+						.col-sm-3
+							img(src="assets/images/il-sussidiario-net.png", width="193", height="37", class="img-responsive", alt="Il sussidiario")
+						.col-sm-8
+							p 
+								span [video] 
+								| Legge di stabilità e bonus fiscali sulle ristrutturazioni
+							hr
+							.embed-responsive.embed-responsive-16by9
+								iframe(width="560", height="315", src="https://www.youtube.com/embed/mzPxo7Y6JyA", frameborder="0", allowfullscreen, class="embed-responsive-item")
+						.clearfix
+				.row
+					article.text-center
+						.col-sm-1
+							small.month NOV
+							br
+							span.day 13
+							br
+							small.year 2015
+						.col-sm-3
+							img(src="assets/images/logo-1.png", width="155", height="27", class="img-responsive", alt="")
+						.col-sm-8
+							p Ristrutturazioni: trentaquattromila euro con i bonus
+						.clearfix
+				.row
+					article.text-center
+						.col-sm-1
+							small.month NOV
+							br
+							span.day 13
+							br
+							small.year 2015
+						.col-sm-3
+							img(src="assets/images/logo-2.png", width="159", height="30", class="img-responsive", alt="")
+						.col-sm-8
+							p Roma, la città più cara d'Italia nelle ristrutturazioni
+						.clearfix
+				.row
+					article.text-center
+						.col-sm-1
+							small.month NOV
+							br
+							span.day 13
+							br
+							small.year 2015
+						.col-sm-3
+							img(src="assets/images/logo-3.png", width="144", height="28", class="img-responsive", alt="")
+						.col-sm-8
+							p La classifica delle città più costose per le ristrutturazioni
+						.clearfix
+				.row
+					nav.text-center
+						ul.pagination
+							li
+								a(href="#")
+									span &laquo;
+							li
+								a(href="#")
+									span &lt;
+							li
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") 4
+							li
+								a(href="#") 5
+							li
+								a(href="#") ...
+							li
+								a(href="#")
+									span &gt;
+							li
+								a(href="#")
+									span &raquo;
+append scripts
+	script(src="assets/js/jquery-ui/jquery-ui.js")
+	script(src="assets/js/script.js")

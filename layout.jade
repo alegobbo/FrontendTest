@@ -1,0 +1,77 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		block head
+			link(href="assets/css/bootstrap/bootstrap.css", rel="stylesheet")
+	body
+		block header
+			header
+				nav.navbar
+					.container
+						.navbar-header
+							button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#header-nav", aria-expanded="false")
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a(class="navbar-brand", href="#")
+								img(src="assets/images/logo-header.png", width="134", height="28", alt="ProntoPro")
+						.collapse.navbar-collapse#header-nav
+							ul.nav.navbar-nav.navbar-right
+								li
+									a(href="#") Come funziona
+								li
+									a(href="#", class="active") Accedi
+								li
+									a(href="#", class="btn btn-primary btn-sm") Sono un professionista
+		block container
+			block content
+			block sidebar
+		block footer
+			footer
+				.container
+					.row
+						.col-sm-3
+							h4 PRONTOPRO
+							ul
+								li
+									a(href="#") Blog
+								li
+									a(href="#") Domande frequenti
+								li
+									a(href="#") Termini e condizioni
+								li
+									a(href="#") Privacy Policy
+						.col-sm-3
+							h4 CLIENTI
+							ul
+								li
+									a(href="#") Come funziona
+								li
+									a(href="#") Sicurezza
+								li
+									a(href="#") Dicono di noi
+						.col-sm-3
+							h4 PROFESSIONISTI
+							ul
+								li
+									a(href="#") Come funziona
+								li
+									a(href="#") I tuo
+								li
+									a(href="#") Termini e condizioni
+								li
+									a(href="#") Privacy Policy
+						.col-sm-3
+							ul
+								li
+									img(src="assets/images/logo-footer.png", width="162", height="34", alt="ProntoPro")
+								li Copyright &copy; 2015 - Tutti i diritti riservati
+								li
+									img(src="assets/images/numero-verde.png", width="154", height="64", alt="Numero Verde")
+		block scripts
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+			script(src="assets/js/bootstrap/bootstrap.js")

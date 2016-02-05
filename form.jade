@@ -1,0 +1,24 @@
+extends layout
+
+prepend head
+	title Form ProntoPro
+append head
+	link(href="assets/css/jquery-ui/jquery-ui.css", rel="stylesheet")
+	link(href="assets/css/style.css", rel="stylesheet")
+block container
+	block content
+		#content
+			.container
+				.row
+					.col-sm-8
+						.form-group.ui-widget
+							label(for="autocomplete")
+							input(type="text", class="form-control", id="autocomplete")
+						.clearfix
+						form#form
+					block sidebar
+						.col-sm-4
+							#submissions
+append scripts
+	script(src="assets/js/jquery-ui/jquery-ui.js")
+	script(src="assets/js/script.js")
