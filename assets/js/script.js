@@ -187,20 +187,32 @@ function renderForm(source, nonce) {
 }
 
 $(function() {
-	var srcAutocomplete = [{"label":"Form 0","url":"https://prontopro.getsandbox.com/form/0"},{"label":"Form 1","url":"https://prontopro.getsandbox.com/form/1"},{"label":"Form 2","url":"https://prontopro.getsandbox.com/form/2"},{"label":"Alpha","url":"https://prontopro.getsandbox.com/form/0"},{"label":"Bravo","url":"https://prontopro.getsandbox.com/form/1"},{"label":"Charlie","url":"https://prontopro.getsandbox.com/form/2"},{"label":"Delta","url":"https://prontopro.getsandbox.com/form/3"},{"label":"Echo","url":"https://prontopro.getsandbox.com/form/4"},{"label":"Foxtrot","url":"https://prontopro.getsandbox.com/form/5"},{"label":"Golf","url":"https://prontopro.getsandbox.com/form/6"},{"label":"Hotel","url":"https://prontopro.getsandbox.com/form/7"},{"label":"India","url":"https://prontopro.getsandbox.com/form/8"},{"label":"Juliet","url":"https://prontopro.getsandbox.com/form/9"}];
 	var ajaxUrl;
 	
 	$("#autocomplete").autocomplete({
-		// source: "https://prontopro.getsandbox.com/autocomplete",
-		source: srcAutocomplete,
+		source: "https://prontopro.getsandbox.com/autocomplete",
 		minLength: 0,
+		focus: function(event, ui) {
+			$("#autocomplete").val(ui.item.label);
+			return false;
+		},
 		select: function(event, ui) {
 			ajaxUrl = ui.item.url;
 			nonce = randomString(8);
 
 			renderForm(ui.item.url);
 		}
-	});
+    })
+	.autocomplete("instance")._renderItem = function(ul, item) {
+		var response = '';
+		if (item.label.indexOf($("#autocomplete").val()) > -1) {
+			response += "<li><a>" + item.label + "</a></li>";
+		}
+		if (null !== item.label) {
+			return $(response)
+			.appendTo(ul);
+		}
+	};
 
 	$('#form').submit(function(e) {
 		e.preventDefault();
